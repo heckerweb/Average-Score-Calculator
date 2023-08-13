@@ -35,9 +35,6 @@ def main(): # Hàm main
 
         while x_tx < int(so_cot_tx):
             input_cot_tx = input("Cot diem mieng so " + str(x_tx) + " cua ban là: ")
-            if int(input_cot_tx) >> 10:
-                print("Diem kiem tra khong the lon hon 10.")
-                main()
             tong_tx = tong_tx + float(input_cot_tx)
             x_tx = x_tx + 1
 
