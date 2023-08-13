@@ -11,18 +11,18 @@ def main(): # Hàm main
         print("3. Mon Tieng Anh")
         print("4. Thoat")
 
-    def xep_loai(mon , tb): # Xếp loại
+    def xep_loai(mon , tbm): # Xếp loại
         gioi = "Chuc mung, ban duoc xep vao loai gioi trong mon " + mon + " !"
         kha = "Ban chi can co gang them chut nua thoi, ban se duoc den dap."
         trb = "Ban can phai co gang them nua, chi can cham chi hoc hanh, ban se duoc den dap."
         yeu = "Ban chi can cham chi hoc hanh la se co tien bo ngay thoi, dung ham choi nua !"
-        if int(tb) >= 8:
+        if int(tbm) >= 8:
             print(gioi)
-        elif int(tb) << 8 and int(tb) >> 5:
+        elif int(tbm) << 8 and int(tbm) >> 5:
             print(kha)
-        elif int(tb) == 5:
+        elif int(tbm) == 5:
             print(trb)
-        elif int(tb) << 5:
+        elif int(tbm) << 5:
             print(yeu)
         
 
@@ -57,9 +57,9 @@ def main(): # Hàm main
 
         # Tính điểm TBC 
         tbc = tong_tx + 2.0 * float(diem_gk) + 3.0 * float(diem_chk)
-        tb = tbc / chia_tb
-        print("Điểm trung binh cong mon " + mon + " cua ban là: " + str(tb))
-        xep_loai(mon=mon, tb=tb)
+        tbm = tbc / chia_tb
+        print("Điểm trung binh cong mon " + mon + " cua ban là: " + str(tbm))
+        xep_loai(mon=mon, tbm=tbm)
         print("")
         main()
 
@@ -93,9 +93,9 @@ def main(): # Hàm main
 
         # Tính điểm TBC 
         tbc = tong_tx + 2.0 * float(diem_gk) + 3.0 * float(diem_chk)
-        tb = tbc / chia_tb
-        print("Điểm trung binh cong mon " + mon + " cua ban là: " + str(tb))
-        xep_loai(mon=mon, tb=tb)
+        tbm = tbc / chia_tb
+        print("Điểm trung binh cong mon " + mon + " cua ban là: " + str(tbm))
+        xep_loai(mon=mon, tbm=tbm)
         print("")
         main()
 
@@ -127,9 +127,9 @@ def main(): # Hàm main
 
         # Tính điểm TBC 
         tbc = tong_tx + 2.0 * float(diem_gk) + 3.0 * float(diem_chk)
-        tb = tbc / chia_tb
-        print("Điểm trung binh cong mon " + mon + " cua ban là: " + str(tb))
-        xep_loai(mon=mon, tb=tb)
+        tbm = tbc / chia_tb
+        print("Điểm trung binh cong mon " + mon + " cua ban là: " + str(tbm))
+        xep_loai(mon=mon, tbm=tbm)
         print("")
         main()
 
