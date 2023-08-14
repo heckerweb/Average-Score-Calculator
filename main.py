@@ -1,7 +1,6 @@
 # v1.0
 # Using with GNU GENERAL PUBLIC LICENSE
 
-
 def main(): # Hàm main
 
     def chon_mon():
@@ -39,7 +38,6 @@ def main(): # Hàm main
 
         input_cot_tx = input("Cot diem mieng so " + str(x_tx) + " cua ban là: ")
         tong_tx = tong_tx + float(input_cot_tx)
-        print(tong_tx)
 
         # Tính điểm GK
         diem_gk = input("Nhap diem giua ki cua ban: ")
@@ -75,7 +73,6 @@ def main(): # Hàm main
 
         input_cot_tx = input("Cot diem mieng so " + str(x_tx) + " cua ban là: ")
         tong_tx = tong_tx + float(input_cot_tx)
-        print(tong_tx)
 
         # Tính điểm GK
         diem_gk = input("Nhap diem giua ki cua ban: ")
@@ -109,7 +106,6 @@ def main(): # Hàm main
 
         input_cot_tx = input("Cot diem mieng so " + str(x_tx) + " cua ban là: ")
         tong_tx = tong_tx + float(input_cot_tx)
-        print(tong_tx)
 
         # Tính điểm GK
         diem_gk = input("Nhap diem giua ki cua ban: ")
@@ -153,7 +149,6 @@ def main(): # Hàm main
             mon_anh()
         elif int(user_chon_mon) == 4:
             exit_program()
-
         else:
             print("Hay nhap so tuong ung voi tung mon hoc !")
             reset_input_1()
@@ -163,7 +158,7 @@ def main(): # Hàm main
             
         user_input()
     
-    def reset_input_2(): # RESET 
+    def reset_input_2(): # 
 
         exit_program()
 
