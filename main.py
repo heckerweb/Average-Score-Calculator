@@ -1,7 +1,6 @@
 # v1.0
 # Using with GNU GENERAL PUBLIC LICENSE
 
-# Made with PASSION from Dao Thanh Tam
 
 def main(): # Hàm main
 
@@ -46,7 +45,7 @@ def main(): # Hàm main
         diem_gk = input("Nhap diem giua ki cua ban: ")
 
         # Tính diểm CHK
-        diem_chk = input("Nhap diem cuoi hoc ki cua ban: ")
+        diem_chk = input("Nhap diem cuoi ki cua ban: ")
 
         # Tính tổng để chia
         tong_bai = x_tx + 2
@@ -82,7 +81,7 @@ def main(): # Hàm main
         diem_gk = input("Nhap diem giua ki cua ban: ")
 
         # Tính diểm CHK
-        diem_chk = input("Nhap diem cuoi hoc ki cua ban: ")
+        diem_chk = input("Nhap diem cuoi ki cua ban: ")
 
         # Tính tổng để chia
         tong_bai = x_tx + 2
@@ -116,7 +115,7 @@ def main(): # Hàm main
         diem_gk = input("Nhap diem giua ki cua ban: ")
 
         # Tính diểm CHK
-        diem_chk = input("Nhap diem cuoi hoc ki cua ban: ")
+        diem_chk = input("Nhap diem cuoi ki cua ban: ")
 
         # Tính tổng để chia
         tong_bai = x_tx + 2
