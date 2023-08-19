@@ -1,5 +1,8 @@
-# v1.0
+# v1.0 -- The core of the program
 # Using with GNU GENERAL PUBLIC LICENSE
+
+
+
 
 def main(): # Hàm main
 
@@ -13,7 +16,9 @@ def main(): # Hàm main
     def chon_hk(mon):
         print("1. Tinh diem TB mon " + mon + " HK1.")
         print("2. Tinh diem TB mon " + mon + " HK2.")
-        print("3. Quay tro lai")
+        print("3. Tính diem TB mon " + mon + " ca nam (HK1 va HK2).")
+        print("4. Quay tro lai")
+
 
 
 
@@ -42,6 +47,8 @@ def main(): # Hàm main
             elif int(input_hk) == 2:
                 hk2_math()
             elif int(input_hk) == 3:
+                tinh_tb_nam(mon=mon)  
+            elif int(input_hk) == 4:
                 main()
             else:
                 print("Vui long nhap so tuong ung 1 hoac 2.")
@@ -57,7 +64,7 @@ def main(): # Hàm main
 
     def hk1_math():
         mon = "Toan"
-        hk = " 1"
+        hk = " HK1"
         # Tính điểm TX
         x_tx = 1
         tong_tx = 0
@@ -84,16 +91,17 @@ def main(): # Hàm main
         # Tính điểm TBC 
         tbc = tong_tx + 2 * float(diem_gk) + 3 * float(diem_chk)
         tbm = tbc / chia_tb
-        print("Điểm trung binh cong mon " + mon + hk + " cua ban là: " + str(tbm))
+        print("Điểm trung binh cong mon " + mon + " trong" + hk + " cua ban là: " + str(tbm))
         xep_loai(mon=mon, tbm=tbm)
         print("")
-        main()
+        mon_toan()
+
 
 
 
     def hk2_math():
         mon = "Toan"
-        hk = " 2"
+        hk = " HK2"
         # Tính điểm TX
         x_tx = 1
         tong_tx = 0
@@ -120,10 +128,20 @@ def main(): # Hàm main
         # Tính điểm TBC 
         tbc = tong_tx + 2 * float(diem_gk) + 3 * float(diem_chk)
         tbm = tbc / chia_tb
-        print("Điểm trung binh cong mon " + mon + hk + " cua ban là: " + str(tbm))
+        print("Điểm trung binh cong mon " + mon + " trong" + hk + " cua ban là: " + str(tbm))
         xep_loai(mon=mon, tbm=tbm)
         print("")
-        main()
+        mon_toan()
+
+    def tinh_tb_nam(mon): 
+        hk1_tb = input("Ban hay nhap diem TB mon " + str(mon) + " trong HK1 cua ban: ")
+        hk2_tb = input("Ban hay nhap diem TB mon " + str(mon) + " trong HK2 cua ban: ")
+
+        hk_2_tb_tinh = float(hk2_tb) * 2
+        tb_ca_nam_cong = float(hk1_tb) + float(hk_2_tb_tinh)
+        tb_ca_nam_chia = float(tb_ca_nam_cong) / 3
+        tb_ca_nam = tb_ca_nam_chia
+        print("Diem TB mon ca nam mon " + str(mon) +  " cua ban la: " + str(tb_ca_nam))
 
 
     def mon_van(): # Toán
@@ -136,6 +154,8 @@ def main(): # Hàm main
             elif int(input_hk) == 2:
                 hk2_vie()
             elif int(input_hk) == 3:
+                tinh_tb_nam(mon=mon)
+            elif int(input_hk) == 4:
                 main()
             else:
                 print("Vui long nhap so tuong ung 1 hoac 2.")
@@ -151,7 +171,7 @@ def main(): # Hàm main
 
     def hk1_vie():
         mon = "Ngu Van"
-        hk = " 1"
+        hk = " HK1"
         # Tính điểm TX
         x_tx = 1
         tong_tx = 0
@@ -178,16 +198,16 @@ def main(): # Hàm main
         # Tính điểm TBC 
         tbc = tong_tx + 2 * float(diem_gk) + 3 * float(diem_chk)
         tbm = tbc / chia_tb
-        print("Điểm trung binh cong mon " + mon + hk + " cua ban là: " + str(tbm))
+        print("Điểm trung binh cong mon " + mon + " trong" + hk + " cua ban là: " + str(tbm))
         xep_loai(mon=mon, tbm=tbm)
         print("")
-        main()
+        mon_van()
 
 
 
     def hk2_vie():
         mon = "Ngu Van"
-        hk = " 2"
+        hk = " HK2"
         # Tính điểm TX
         x_tx = 1
         tong_tx = 0
@@ -214,10 +234,10 @@ def main(): # Hàm main
         # Tính điểm TBC 
         tbc = tong_tx + 2 * float(diem_gk) + 3 * float(diem_chk)
         tbm = tbc / chia_tb
-        print("Điểm trung binh cong mon " + mon + hk + " cua ban là: " + str(tbm))
+        print("Điểm trung binh cong mon " + mon + " trong" + hk + " cua ban là: " + str(tbm))
         xep_loai(mon=mon, tbm=tbm)
         print("")
-        main()
+        mon_van()
 
 
     def mon_anh(): # Toán
@@ -230,6 +250,8 @@ def main(): # Hàm main
             elif int(input_hk) == 2:
                 hk2_english()
             elif int(input_hk) == 3:
+                tinh_tb_nam(mon=mon)
+            elif int(input_hk) == 4:
                 main()
             else:
                 print("Vui long nhap so tuong ung 1 hoac 2.")
@@ -245,7 +267,7 @@ def main(): # Hàm main
 
     def hk1_english():
         mon = "Tieng Anh"
-        hk = " 1"
+        hk = " HK1"
         # Tính điểm TX
         x_tx = 1
         tong_tx = 0
@@ -272,16 +294,16 @@ def main(): # Hàm main
         # Tính điểm TBC 
         tbc = tong_tx + 2 * float(diem_gk) + 3 * float(diem_chk)
         tbm = tbc / chia_tb
-        print("Điểm trung binh cong mon " + mon + hk + " cua ban là: " + str(tbm))
+        print("Điểm trung binh cong mon " + mon + " trong" + hk + " cua ban là: " + str(tbm))
         xep_loai(mon=mon, tbm=tbm)
         print("")
-        main()
+        mon_anh()
 
 
 
     def hk2_english():
         mon = "Tieng Anh"
-        hk = " 2"
+        hk = " HK2"
         # Tính điểm TX
         x_tx = 1
         tong_tx = 0
@@ -308,10 +330,10 @@ def main(): # Hàm main
         # Tính điểm TBC 
         tbc = tong_tx + 2 * float(diem_gk) + 3 * float(diem_chk)
         tbm = tbc / chia_tb
-        print("Điểm trung binh cong mon " + mon + hk + " cua ban là: " + str(tbm))
+        print("Điểm trung binh cong mon " + mon + " trong" + hk + " cua ban là: " + str(tbm))
         xep_loai(mon=mon, tbm=tbm)
         print("")
-        main()
+        mon_anh()
 
 
     def exit_program():
