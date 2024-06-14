@@ -1,2 +1,2 @@
 # Tinh-diem-TB-mon
-* This my first python project.
+* This my basic python project.
